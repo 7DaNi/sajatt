@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+Attributes description: 
+img: the background image of each slide 
+title: the title text of each slide 
+description: the description text of each slide 
+text_color: the color of the text of each slide 
+text_align: the horizontal alignment of the text of each slide (options: "left" and "right") 
+text_valign: the vertical alignment of the text of each slide (options: "top" and "bottom") 
+text_margin: the outside margin of the text of each slide (options: number in pixels) 
+text_background_color: the background color of text of each slide (format: "0x000000", e.g. 0xffffff for white, 0xff0000 for red etc.)
+text_background_alpha: the opacity of the background of text (format: an integer from 0 to 100, e.g. "0" for transparency, "50" for semi-transparency, "100" for full color etc.) 
+text_background_border_thickness: the thickness (in pixels) of the border of the text's background 
+text_background_border_color: the color of the border of the text's background (format: "0x000000", e.g. 0xffffff for white, 0xff0000 for red etc.) 
+text_background_border_alpha: the opacity of the border of the text's background (format: an integer from 0 to 100, e.g. "0" for transparency, "50" for semi-transparency, "100" for full color etc.) 
+slide_background_color: the background color of the slide 
+link: the target URL of each slide 
+-->
+<entries>
+<myItem 
+	img='pizza-01.jpg' 
+	title='AKCIÓS PIZZA &lt;br /&gt;Carbonara' 
+	description='(tejszín, fokhagyma, bacon, tojás, mozzarella)' 
+	text_color='0xffffff' 
+	text_align='left' 
+	text_valign='top' 
+	text_margin='30'
+	text_background_color='0x000000' 
+	text_background_alpha='50' 
+	text_background_border_thickness='0' 
+	text_background_border_color='0xffffff' 
+	text_background_border_alpha='0' 
+	slide_background_color='0xffffff'  
+	link='#1' 
+/>
+<myItem 
+	img='pizza-02.jpg' 
+	title='AKCIÓS PIZZA &lt;br /&gt;Húsimádó' 
+	description='(paradicsomszósz, sonka, tarja, bacon, &lt;br /&gt; szalámi, csirkemell, mozzarella)' 
+	text_color='0xffffff' 
+	text_align='left' 
+	text_valign='top' 
+	text_margin='30'
+	text_background_color='0x000000' 
+	text_background_alpha='50' 
+	text_background_border_thickness='0' 
+	text_background_border_color='0xffffff' 
+	text_background_border_alpha='0' 
+	slide_background_color='0xffffff'   
+	link='#2'
+/>
+<myItem 
+	img='cezar-01.jpg' 
+	title='AKCIÓS SALÁTA &lt;br /&gt;Cézár saláta' 
+	description='(jégsaláta, rukkola, madársaláta, sárgarépa, &lt;br /&gt;uborka, paradicsom, kukorica, csirkemell, &lt;br /&gt;parmesan, választható öntet)' 
+	text_color='0xffffff' 
+	text_align='left' 
+	text_valign='top' 
+	text_margin='30'
+	text_background_color='0x000000' 
+	text_background_alpha='50' 
+	text_background_border_thickness='0' 
+	text_background_border_color='0xffffff' 
+	text_background_border_alpha='0' 
+	slide_background_color='0xffffff'   
+	link='#3'
+/>
+</entries>
