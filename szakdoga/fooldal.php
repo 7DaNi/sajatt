@@ -6,9 +6,9 @@
 <script type="text/javascript" src="banner.js"></script>
 </head>
 <body>
-<div id="swf_content">
-	<p>Frissítés alatt.</p>
-</div>
+	<div id="swf_content">
+		<p>Frissítés alatt.</p>
+	</div>
 <?php
 session_start ();
 require_once ('head.php');
@@ -49,27 +49,28 @@ if (isset ( $_POST ["belepes"] )) {
 		exit ();
 	}
 }
-	if (! isset ( $_SESSION ["user"] ) || ! isset ( $_SESSION ["pw"] )) {
-		echo '<form id=login name="login" method="post" action="' . $_SERVER ['PHP_SELF'] . '">
- 			<label>BEJELENTKEZÉS</label><br /><br /><br />
- 			<input type="text" name="user" title="Felhasználónév" placeholder="Felhasználónév"/><br /><br />
- 			<input type="password" name="pw" title="Jelszó" placeholder="Jelszó"/><br /><br />
-			<input  value="Belépés" name="belepes" id="belepes" class="button green" title="Belépés" type="submit">
-			<a href="regisztracio.php" id="regisztracio" class="button red">Regisztráció</a>
-			<a href="jelszoemlek.php" id="jelszoemlek">Elfelejtetted a jelszavad?</a>
-			</form>';
-		exit ();
-	} else {
-		echo '<form id=adat name="adat" method="post" action="' . $_SERVER ['PHP_SELF'] . '">
- 			<label>ADATAIM</label><br /><br /><br />
- 			<label>Üdvözöljük</label><br /><br />
- 			<label>' . utf8_encode ( $_SESSION ["nev"] ) . '</label><br /><br />
-			<a href="adatmodositas.php" id="adatmodositas" class="button red">Adatmódosítás</a>
-			<a href="ujcim.php" id="ujcim" class="button red">Új cím</a>
-			<a href="logout_session.php" id="kilepes" class="button red2">Kilépés</a>
-			</form>';
-		exit ();
-	}
+
+if (! isset ( $_SESSION ["user"] ) || ! isset ( $_SESSION ["pw"] )) {
+	echo '<form id=login name="login" method="post" action="' . $_SERVER ['PHP_SELF'] . '">
+ 		<label>BEJELENTKEZÉS</label><br /><br /><br />
+ 		<input type="text" name="user" title="Felhasználónév" placeholder="Felhasználónév"/><br /><br />
+ 		<input type="password" name="pw" title="Jelszó" placeholder="Jelszó"/><br /><br />
+		<input  value="Belépés" name="belepes" id="belepes" class="button green" title="Belépés" type="submit">
+		<a href="regisztracio.php" id="regisztracio" class="button red">Regisztráció</a>
+		<a href="jelszoemlek.php" id="jelszoemlek">Elfelejtetted a jelszavad?</a>
+		</form>';
+	exit ();
+} else {
+	echo '<form id=adat name="adat" method="post" action="' . $_SERVER ['PHP_SELF'] . '">
+ 		<label>ADATAIM</label><br /><br /><br />
+ 		<label>Üdvözöljük</label><br /><br />
+ 		<label>' . utf8_encode ( $_SESSION ["nev"] ) . '</label><br /><br />
+		<a href="adatmodositas.php" id="adatmodositas" class="button red">Adatmódosítás</a>
+		<a href="ujcim.php" id="ujcim" class="button red">Új cím</a>
+		<a href="logout_session.php" id="kilepes" class="button red2">Kilépés</a>
+		</form>';
+	exit ();
+}
 require_once ('footer.php');
 ?>  
 </body>
