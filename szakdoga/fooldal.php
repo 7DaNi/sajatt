@@ -49,7 +49,6 @@ if (isset ( $_POST ["belepes"] )) {
 		exit ();
 	}
 }
-{//ez az encapsulation direkt van itt?
 	if (! isset ( $_SESSION ["user"] ) || ! isset ( $_SESSION ["pw"] )) {
 		echo '<form id=login name="login" method="post" action="' . $_SERVER ['PHP_SELF'] . '">
  			<label>BEJELENTKEZÉS</label><br /><br /><br />
@@ -71,7 +70,6 @@ if (isset ( $_POST ["belepes"] )) {
 			</form>';
 		exit ();
 	}
-}
 require_once ('footer.php');
 ?>  
 </body>
