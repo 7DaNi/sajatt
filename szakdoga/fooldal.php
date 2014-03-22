@@ -45,29 +45,29 @@ if (isset ( $_POST ["belepes"] )) {
 			exit ();
 		}
 	} else {
-		echo "Nincs megfelelĹ‘ rangja!";
+		echo "Nincs megfelelő rangja!";
 		exit ();
 	}
 }
 {//ez az encapsulation direkt van itt?
 	if (! isset ( $_SESSION ["user"] ) || ! isset ( $_SESSION ["pw"] )) {
 		echo '<form id=login name="login" method="post" action="' . $_SERVER ['PHP_SELF'] . '">
- 			<label>BEJELENTKEZĂ‰S</label><br /><br /><br />
- 			<input type="text" name="user" title="FelhasznĂˇlĂłnĂ©v" placeholder="FelhasznĂˇlĂłnĂ©v"/><br /><br />
- 			<input type="password" name="pw" title="JelszĂł" placeholder="JelszĂł"/><br /><br />
-			<input  value="BelĂ©pĂ©s" name="belepes" id="belepes" class="button green" title="BelĂ©pĂ©s" type="submit">
-			<a href="regisztracio.php" id="regisztracio" class="button red">RegisztrĂˇciĂł</a>
+ 			<label>BEJELENTKEZÉS</label><br /><br /><br />
+ 			<input type="text" name="user" title="Felhasználónév" placeholder="Felhasználónév"/><br /><br />
+ 			<input type="password" name="pw" title="Jelszó" placeholder="Jelszó"/><br /><br />
+			<input  value="Belépés" name="belepes" id="belepes" class="button green" title="Belépés" type="submit">
+			<a href="regisztracio.php" id="regisztracio" class="button red">Regisztráció</a>
 			<a href="jelszoemlek.php" id="jelszoemlek">Elfelejtetted a jelszavad?</a>
 			</form>';
 		exit ();
 	} else {
 		echo '<form id=adat name="adat" method="post" action="' . $_SERVER ['PHP_SELF'] . '">
  			<label>ADATAIM</label><br /><br /><br />
- 			<label>ĂśdvĂ¶zĂ¶ljĂĽk</label><br /><br />
+ 			<label>Üdvözöljük</label><br /><br />
  			<label>' . utf8_encode ( $_SESSION ["nev"] ) . '</label><br /><br />
-			<a href="adatmodositas.php" id="adatmodositas" class="button red">AdatmĂłdosĂ­tĂˇs</a>
-			<a href="ujcim.php" id="ujcim" class="button red">Ăšj cĂ­m</a>
-			<a href="logout_session.php" id="kilepes" class="button red2">KilĂ©pĂ©s</a>
+			<a href="adatmodositas.php" id="adatmodositas" class="button red">Adatmódosítás</a>
+			<a href="ujcim.php" id="ujcim" class="button red">Új cím</a>
+			<a href="logout_session.php" id="kilepes" class="button red2">Kilépés</a>
 			</form>';
 		exit ();
 	}
