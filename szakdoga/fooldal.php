@@ -36,17 +36,17 @@ if (isset ( $_POST ["belepes"] )) {
 		$_SESSION ["nev"] = $nev;
 		if (isset ( $_SESSION ["rang"] ) && $_SESSION ["rang"] == 1) {
 			header ( 'location: fooldal.php' );
-			exit ();
+			//exit ();
 		} else if (isset ( $_SESSION ["rang"] ) && $_SESSION ["rang"] == 2) {
 			header ( 'location: rendeleskezelo.php' );
-			exit ();
+			//exit ();
 		} else if (isset ( $_SESSION ["rang"] ) && $_SESSION ["rang"] == 3) {
 			header ( 'location: admin.php' );
-			exit ();
+			//exit ();
 		}
 	} else {
-		echo "Nincs megfelelő rangja!";
-		exit ();
+		echo "A belépés sikertelen!";
+		//exit ();
 	}
 }
 
@@ -59,7 +59,7 @@ if (! isset ( $_SESSION ["user"] ) || ! isset ( $_SESSION ["pw"] )) {
 		<a href="regisztracio.php" id="regisztracio" class="button red">Regisztráció</a>
 		<a href="jelszoemlek.php" id="jelszoemlek">Elfelejtetted a jelszavad?</a>
 		</form>';
-	exit ();
+	//exit ();
 } else {
 	echo '<form id=adat name="adat" method="post" action="' . $_SERVER ['PHP_SELF'] . '">
  		<label>ADATAIM</label><br /><br /><br />
@@ -69,7 +69,7 @@ if (! isset ( $_SESSION ["user"] ) || ! isset ( $_SESSION ["pw"] )) {
 		<a href="ujcim.php" id="ujcim" class="button red">Új cím</a>
 		<a href="logout_session.php" id="kilepes" class="button red2">Kilépés</a>
 		</form>';
-	exit ();
+	//exit ();
 }
 require_once ('footer.php');
 ?>  
